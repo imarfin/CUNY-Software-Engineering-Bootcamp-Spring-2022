@@ -1,0 +1,81 @@
+* {
+    margin-top: 0%;
+    padding: 0%;
+
+}
+body {
+    background-color: gray;
+}
+
+header {
+    padding-bottom: 15px;
+    text-align: center;
+    background-color: black;
+    font-size: 1.4em;
+    font-weight: 400;
+    font-style: bold;
+    word-spacing: 20px;
+    color: white;
+    padding-top: 20px;
+
+}
+ul {
+    color: papayawhip;
+}
+a:hover {
+    background-color: #f4c93f;
+    color: while;
+}
+
+.diviframe {
+    width: 25%;
+    border-style: solid;
+    border-style: box;
+    border-color: rgb(213, 19, 213);
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    position: center;
+    margin-left: 40%;  
+    overflow: hidden;
+    border-style: double;
+    padding-top: 10px;
+}
+
+.containter {
+    display: inline-flex;
+
+}
+
+.divimg{
+    position: bottom;
+    width: 15%;
+    height: 15%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-bottom: hotpink;
+    margin-left: 25px;
+    border: 2px solid red;
+}
+
+.divtext{
+    margin-left: 50%;
+    margin-top: 10%;
+    float: right;
+    margin-bottom: 20px;
+    border-style: solid;
+    height: 150px;
+    background-color: rgb(220, 119, 220);
+
+}
+
+button {
+    position: bottom;
+    color: lemonchiffon;
+    background-color: rgb(252, 178, 41);
+    border-radius: 15%;
+    width: 10%;
+    height: 10%;
+    float: right;
+    margin-right: 15%;
+}

@@ -1,0 +1,657 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*   {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* padding: 40px 100px; 
+  padding-top: 0%; */
+  padding-bottom: 5%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* 
+/* header .logo {
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+} */
+
+
+/* .toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+  background-color: rgb(34, 29, 97);;
+}
+
+.toggle.active {
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}  */
+
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+.showcase.active {
+  right: 300px;
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 10;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #79ce80;
+  mix-blend-mode: overlay;
+}
+.text {
+  position: relative;
+  z-index: 10;
+}
+
+.text h2 {
+  font-size: 5em;
+  font-weight: 800;
+  color: rgb(34, 29, 97);
+  line-height: 1em;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
+
+.text h3 {
+  font-size: 2em;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  line-height: 1em;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.text p {
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.text a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.text a:hover {
+  letter-spacing: 6px;
+}
+
+
+.social {
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social li {
+  list-style: none;
+}
+.social li a    {
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+
+.social li a:hover {
+  transform: scale(0.5) translateY(-15px);
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul {
+  position: relative;
+}
+.menu ul li {
+  list-style: none;
+}
+.menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+
+.menu ul li a:hover {
+  color: #03a9f4; 
+}
+
+@media (max-width: 991px){
+  .showcase,
+  .showcase header {
+    padding: 40px;
+}
+.text h2 {
+    font-size: 2em;
+}
+.text h3 {
+    font-size: 1em;
+  }
+}
+
+
+
+
+/* DESTINATION PAGE -- CSS */
+
+.destinations {
+
+    text-align: center;
+    padding: auto;
+    font-size: 2em;
+    font-weight: 800;
+    color: rgb(34, 29, 97);
+    line-height: 1em;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 4em;
+    padding: 25px;
+}
+
+.post{
+    flex: 0 1 calc(33.33% - 1rem);
+    cursor: pointer;
+}
+
+.post-img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.12);
+    transition: var( --transition);
+}
+
+.post-content{
+    background: rgb(129, 204, 116);
+    margin: 0 20px;
+    padding: 15px;
+    transform: translateY(-33px);
+    border-radius: 6px;
+    transition: var( --transition);
+}
+
+h6 {
+    text-align: center;
+}
+
+/* h4{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 400;
+} */
+
+/* .post-content h2{
+    color: #42464a;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+.date-published{
+    color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+} */
+
+
+.post:hover img {
+    transform: translateY(10px);
+}
+
+.post:hover .post-content{
+    transform: translateY(-90px);
+}
+
+@media (max-width:992px){
+    .post{
+        flex: 0 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width:768px){
+    .post{
+        flex: 0 1 100%;
+    }
+
+    h6 {
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+.themeable .post-content{
+    background: var(--themed-bg);
+    color: var(--themed-color);
+}
+
+.themeable .post-content h2{
+    color: var(--themed-color);
+}
+
+.themeable .post-content .date-published{
+    color: var(--themed-color);
+}
+
+
+
+
+/* MODEL WINDOW CSS */
+
+/* When Modal Is The Target */
+
+.post .btn {
+
+    background: var(--primary-color);
+    color: rgb(23, 19, 19);
+    border: solid;
+    text-transform: uppercase;
+    border-radius: 50px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    outline: none;
+    font-size: 80%; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+:target {
+    background: rgba(0, 0, 0, .75);
+    background: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* transition: background 0.35s; */
+}
+
+/* Modal Content Styling */
+
+:target .content {
+    background: #fff;
+    border-radius: 10px;
+    width: 400px;
+    padding: 2rem;
+    position: absolute;
+    top: 20%;
+    left: calc(50% - 15rem);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cards.post:target .content h2 {
+    font-size: 30px;
+    font-weight: bolder;
+    line-height: 1.2;
+}
+
+
+
+/* Close Button */
+:target .close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+:target .close a {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    text-indent: 2rem;
+    overflow: hidden;
+    background: var(--primary-color);
+    border-radius: 100%;
+    border: 0.125rem solid #fff;
+}
+
+:target .close:after {
+    content: "✕";
+    color: white;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    pointer-events: none;
+    font-weight: bolder;
+}
+
+@media (max-width:600px) {
+
+    /* Modal Content Styling */
+    .post:target .content {
+        margin-top: -5rem;
+        width: 300px;
+        padding: 1rem;
+        left: calc(50% - 170px);
+    }
+
+    .post:target .content h6 {
+        font-size: 25px;
+    }
+
+    .form-control {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .form-control input {
+        width: 90%;
+    }
+
+    .form-control .btn {
+        position: relative;
+        top: 0.5rem;
+        width: 100%;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+    }
+
+}
+
+
+/* Sign in Page */
+
+.singin {
+    text-align: center;
+    padding: auto;
+    font-size: 2em;
+    font-weight: 800;
+    color: rgb(34, 29, 97);
+    line-height: 1em;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+
+/* Check out Page */
+
+.checkout {
+  text-align: center;
+  padding: auto;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: rgb(34, 29, 97);
+  line-height: 1em;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  padding-top: 15%;
+}
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+  }
+  
+  .col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  span.price {
+    float: right;
+    color: grey;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+  @media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }
+
+/* Contact */
+.contactus {
+    text-align: center;
+    padding: auto;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: rgb(34, 29, 97);
+    line-height: 1em;
+    text-transform: uppercase;
+    padding-bottom: 0;
+    padding-top: 16%;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Assainment 5</title>
+</head>
+
+<body>
+    <h1>Question A: Temperature Converter</h1>
+
+    <div class="fahrenheit">
+        <h2>Fahrenheit to Celsiuc </h2>
+        <p><label>Fahrenheit</label>
+            <input id="inputFahrenheit" type="number" placeholder="NNF" oninput="temperatureConverter(this.value)"
+                onchange="temperatureConverter(this.value)">
+        </p>
+        <p>Celsius :<span id="outputCelcius"></span></p>
+    </div>
+
+    <div class="celsius">
+        <h2>Celsiuc to Fahrenheit</h2>
+        <label>Celsius</label>
+        <input id="inputCelsius" type="number" placeholder="NNC" oninput="temperatureConverter(this.value)"
+            onchange="temperatureConverter(this.value)">
+        </p>
+        <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+
+    </div>
+
+</body>
+
+</html>
